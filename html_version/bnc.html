@@ -1,0 +1,19 @@
+<head>
+  <link rel="stylesheet" href="bnc.css">
+<script type="text/javascript" src="bnc.js"></script>
+</head>
+<body>
+	<h1>The Bulls and Cows game!</h1>
+  <div class="wrapper">
+	<input type="number" max="9999" min="0000" placeholder="e.g. 1234" id="try"
+onkeydown = "if (event.keyCode == 13)
+                        document.getElementById('submit').click()"
+                        /><input type="submit" name="submit" id="submit" onclick="check()">
+	<p>Console</p>
+	<textarea name="console" id="console" cols="60" rows="30">Gameplay looks so: you enter your guess code, computer compares it with the secret code and gives you two clues: numbers of "bulls" and "cows". What does this mean? A bull is a digit which is present in both the codes in the same position. And a cow is a digit which is present in both the codes in the different position. For example, if the secret code is 2056 and you ask 9516, an answer will be "one bull and one cow" (but you won't know which digit is a bull and which digit is a cow). That's all!</textarea></div>
+
+<script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+</body>
