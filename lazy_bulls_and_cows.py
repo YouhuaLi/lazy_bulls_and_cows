@@ -33,7 +33,7 @@ def main():
     attempts = 0
     available_numbers = init_secret_number()
     print("Welcome to Bulls and Cows game!")
-    print(f"I will update my choice count dynamitically. Try to guess it!")
+    print("I will update my choice count dynamitically. Try to guess it!")
 
     while True:
         #print(f"Available numbers: {available_numbers}")
