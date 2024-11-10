@@ -6,12 +6,18 @@
 	<h1>The Bulls and Cows game!</h1>
   <div class="wrapper">
 	<input type="number" max="9999" min="0000" placeholder="e.g. 1234" id="try"
-onkeydown = "if (event.keyCode == 13)
-                        document.getElementById('submit').click()"
-                        /><input type="submit" name="submit" id="submit" onclick="check()">
-	<p>Console</p>
-	<textarea name="console" id="console" cols="60" rows="30">Gameplay looks so: you enter your guess code, computer compares it with the secret code and gives you two clues: numbers of "bulls" and "cows". What does this mean? A bull is a digit which is present in both the codes in the same position. And a cow is a digit which is present in both the codes in the different position. For example, if the secret code is 2056 and you ask 9516, an answer will be "one bull and one cow" (but you won't know which digit is a bull and which digit is a cow). That's all!</textarea></div>
+onkeydown="if (event.keyCode == 13) document.getElementById('submit').click()"
+/><input type="submit" name="submit" id="submit" onclick="check()">
+<p>Console</p>
+<textarea name="console" id="console" cols="60" rows="30">
+这是一个常见的bulls and cows游戏。你需要猜一个四位数字，每一位取值范围是0-9，数字不重复使用。每一次猜测后，电脑会返回“bulls”和“cows”的数量。bulls是猜测中，数字和位置都正确的数量，cows是你的猜测中，数字正确，但位置不正确的数量。你的目标是用最少的次数猜中数字。
 
+与一般的bulls and cows游戏不同，这个游戏中，电脑并不会提前决定其秘密数字，而是根据猜测，动态更新其秘密数字。这样，你可以在猜测中逐渐压缩电脑可以选择的秘密数字，当电脑只剩下一个选择时，你就赢了。另外，电脑会提示每一轮后，其可以选择数字数量。这样，你可以根据提示，更好地选择下一轮的猜测。
+
+This is a classic Bulls and Cows game. You need to guess a four-digit number, with each digit ranging from 0 to 9, and no repeated digits. After each guess, the computer will return the numbers of "bulls" and "cows." Bulls are the count of digits that are correct in both number and position, while cows are the count of digits that are correct but in the wrong position. Your goal is to guess the number in the fewest attempts possible.
+
+Unlike the usual Bulls and Cows game, in this version, the computer doesn’t predefine a secret number. Instead, it dynamically updates its possible secret number based on your guesses. This way, you can progressively narrow down the computer's choices with each guess, and you win once the computer has only one option left. Additionally, after each round, the computer will indicate the remaining number of possible choices, allowing you to make better-informed guesses in the following rounds.
+</textarea></div>
 <script
   src="https://code.jquery.com/jquery-3.2.1.js"
   integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
