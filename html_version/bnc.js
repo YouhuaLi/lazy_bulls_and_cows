@@ -84,6 +84,10 @@ function generateResponse(guess, availableNumbers) {
 		.filter(([_, value]) => value.length === maxCount)
 		.map(([key, value]) => ({ key: key.split(',').map(Number), numbers: value }));
 
+    // 如果有多个最常出现的 (bulls, cows) 组合，去掉 (4, 0)
+    if (maxResponses.length > 1) {
+        maxResponses = maxResponses.filter(response => !(response.key[0] === 4 && response.key[1] === 0));
+    }
     //console.log("maxResponses:", maxResponses);
 
 	// 随机选择一个最常出现的 (bulls, cows) 组合
